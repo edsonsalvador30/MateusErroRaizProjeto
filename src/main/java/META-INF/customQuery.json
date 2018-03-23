@@ -1,0 +1,1976 @@
+{
+	"auth": {
+		"customId": "auth",
+		"queryName": "Autenticar",
+		"screen": "",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": "select o from User o where o.login = :login",
+		"queryParamsValues": [
+			{
+				"fieldName": "login",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": false,
+			"GETAuthorities": null,
+			"POST": false,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/auth/"
+	},
+	"roles": {
+		"customId": "roles",
+		"queryName": "Obter Autorização",
+		"screen": "",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Role",
+		"entityFullName": "app.entity.Role",
+		"query": "select o.id from Role o where o.user.login = :login",
+		"queryParamsValues": [
+			{
+				"fieldName": "login",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": false,
+			"GETAuthorities": null,
+			"POST": false,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"user": null
+		},
+		"security": {
+			"id": null,
+			"user": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/roles/"
+	},
+	"tenant": {
+		"customId": "tenant",
+		"queryName": "Obter Id de Multi-inquilino",
+		"screen": "",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": "select u.company.id from User u where u.login = :login",
+		"queryParamsValues": [
+			{
+				"fieldName": "login",
+				"fieldValue": ""
+			}
+		],
+		"verbs": {
+			"GET": false,
+			"GETAuthorities": null,
+			"POST": false,
+			"POSTAuthorities": null,
+			"PUT": false,
+			"PUTAuthorities": null,
+			"DELETE": false,
+			"DELETEAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null
+		},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/tenant/"
+	},
+	"1k1rr2bgkoeht": {
+		"customId": "UserSkills",
+		"queryName": "USerSkills",
+		"screen": "src/main/webapp/views/logged/userskills.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "UserSkills",
+		"entityFullName": "app.entity.UserSkills",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "UserSkills",
+					"namespace": "app.entity.UserSkills",
+					"alias": "u"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [
+				{
+					"func": "get",
+					"field": "u.skill.skill",
+					"order": "asc"
+				}
+			],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "u.cronuser_email",
+						"field": "u.cronuser_email",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":cronuser_email",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": false,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "cronuser_email",
+				"fieldValue": {
+					"blocklyClass": "blockly.UserSkillsBusiness",
+					"blocklyMethod": "getEmailfromLoggedUser",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UserSkillsBusiness",
+						"classNameNew": "UserSkillsBusiness",
+						"classNameOld": "UserSkillsBusiness",
+						"sourcePath": "src/main/java/blockly/UserSkillsBusiness.blockly",
+						"language": "java",
+						"class": "blockly.UserSkillsBusiness",
+						"methods": [
+							{
+								"name": "checkDuplicate",
+								"hasReturn": "true",
+								"params": [
+									"Entidade<app.entity.UserSkills>"
+								]
+							},
+							{
+								"name": "hasSkill",
+								"hasReturn": "true",
+								"params": [
+									"skilltext"
+								]
+							},
+							{
+								"name": "getEmailfromLoggedUser",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UserSkillsBusiness:getEmailfromLoggedUser', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": {
+				"blocklyClass": "blockly.UserSkillsBusiness",
+				"blocklyMethod": "checkDuplicate",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UserSkillsBusiness",
+					"classNameNew": "UserSkillsBusiness",
+					"classNameOld": "UserSkillsBusiness",
+					"sourcePath": "src/main/java/blockly/UserSkillsBusiness.blockly",
+					"language": "java",
+					"class": "blockly.UserSkillsBusiness",
+					"methods": [
+						{
+							"name": "checkDuplicate",
+							"hasReturn": "true",
+							"params": [
+								"Entidade<app.entity.UserSkills>"
+							]
+						},
+						{
+							"name": "hasSkill",
+							"hasReturn": "true",
+							"params": [
+								"skilltext"
+							]
+						},
+						{
+							"name": "getEmailfromLoggedUser",
+							"hasReturn": "true",
+							"params": []
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UserSkillsBusiness:checkDuplicate', null, null)"
+			},
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"cronuser_email": {
+				"blocklyClass": "blockly.UserSkillsBusiness",
+				"blocklyMethod": "getEmailfromLoggedUser",
+				"blocklyLanguage": "java",
+				"blocklyJson": {
+					"namespace": "blockly.UserSkillsBusiness",
+					"classNameNew": "UserSkillsBusiness",
+					"classNameOld": "UserSkillsBusiness",
+					"sourcePath": "src/main/java/blockly/UserSkillsBusiness.blockly",
+					"language": "java",
+					"class": "blockly.UserSkillsBusiness",
+					"methods": [
+						{
+							"name": "checkDuplicate",
+							"hasReturn": "true",
+							"params": [
+								"Entidade<app.entity.UserSkills>"
+							]
+						},
+						{
+							"name": "hasSkill",
+							"hasReturn": "true",
+							"params": [
+								"skilltext"
+							]
+						},
+						{
+							"name": "getEmailfromLoggedUser",
+							"hasReturn": "true",
+							"params": []
+						}
+					]
+				},
+				"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UserSkillsBusiness:getEmailfromLoggedUser', null, null)",
+				"blocklyGETMethod": null,
+				"blocklyPOSTMethod": null,
+				"blocklyPUTMethod": null,
+				"blocklyDELETEMethod": null,
+				"blocklyFILTERMethod": null
+			},
+			"level": null,
+			"skill": null
+		},
+		"security": {
+			"id": null,
+			"cronuser_email": null,
+			"level": null,
+			"skill": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1k1rr2bgkoeht/"
+	},
+	"urrvo1ed5lr8": {
+		"customId": "SkillsOrdenadas",
+		"queryName": "SkillsOrdenadas",
+		"screen": "src/main/webapp/views/logged/userskills.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Skill",
+		"entityFullName": "app.entity.Skill",
+		"query": {
+			"isEmpty": true,
+			"isRawSql": true,
+			"sqlContent": "select s from Skill s where NOT (s IN (select us.skill from UserSkills us where us.cronuser_email = :email) )   order by s.skill asc",
+			"multiTenant": false,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "email",
+				"fieldValue": {
+					"blocklyClass": "blockly.UserSkillsBusiness",
+					"blocklyMethod": "getEmailfromLoggedUser",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UserSkillsBusiness",
+						"classNameNew": "UserSkillsBusiness",
+						"classNameOld": "UserSkillsBusiness",
+						"sourcePath": "src/main/java/blockly/UserSkillsBusiness.blockly",
+						"language": "java",
+						"class": "blockly.UserSkillsBusiness",
+						"methods": [
+							{
+								"name": "checkDuplicate",
+								"hasReturn": "true",
+								"params": [
+									"Entidade<app.entity.UserSkills>"
+								]
+							},
+							{
+								"name": "hasSkill",
+								"hasReturn": "true",
+								"params": [
+									"skilltext"
+								]
+							},
+							{
+								"name": "getLoggedUserSkills",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "getEmailfromLoggedUser",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UserSkillsBusiness:getEmailfromLoggedUser', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"skill": null,
+			"skillCat": null
+		},
+		"security": {
+			"id": null,
+			"skill": null,
+			"skillCat": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/urrvo1ed5lr8/"
+	},
+	"vbbu0cshe2jm": {
+		"customId": "todotasks",
+		"queryName": "todotasks",
+		"screen": "src/main/webapp/views/logged/TodoTasks.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Task",
+		"entityFullName": "app.entity.Task",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Task",
+					"namespace": "app.entity.Task",
+					"alias": "t"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "t",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "t.status",
+						"field": "t.status",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":status",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": false,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "status",
+				"fieldValue": {
+					"blocklyClass": "blockly.TasksBusiness",
+					"blocklyMethod": "todo",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.TasksBusiness",
+						"classNameNew": "TasksBusiness",
+						"classNameOld": "TasksBusiness",
+						"sourcePath": "src/main/java/blockly/TasksBusiness.blockly",
+						"language": "java",
+						"class": "blockly.TasksBusiness",
+						"methods": [
+							{
+								"name": "assigned",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "todo",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.TasksBusiness:todo', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"title": null,
+			"description": null,
+			"price": null,
+			"cronappuser_email": null,
+			"assignmentDate": null,
+			"document": null,
+			"status": null,
+			"project": null
+		},
+		"security": {
+			"id": null,
+			"title": null,
+			"description": null,
+			"price": null,
+			"cronappuser_email": null,
+			"assignmentDate": null,
+			"document": null,
+			"status": null,
+			"project": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/vbbu0cshe2jm/"
+	},
+	"t84459ywot9z": {
+		"customId": "mytasks",
+		"queryName": "mytasks",
+		"screen": "src/main/webapp/views/logged/mytasks.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Task",
+		"entityFullName": "app.entity.Task",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Task",
+					"namespace": "app.entity.Task",
+					"alias": "t"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "t",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "t.status",
+						"field": "t.status",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":status",
+						"valueIsField": false
+					},
+					{
+						"id": "t.cronappuser_email",
+						"field": "t.cronappuser_email",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":cronappuser_email",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": false,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "status",
+				"fieldValue": {
+					"blocklyClass": "blockly.TasksBusiness",
+					"blocklyMethod": "assigned",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.TasksBusiness",
+						"classNameNew": "TasksBusiness",
+						"classNameOld": "TasksBusiness",
+						"sourcePath": "src/main/java/blockly/TasksBusiness.blockly",
+						"language": "java",
+						"class": "blockly.TasksBusiness",
+						"methods": [
+							{
+								"name": "assigned",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "todo",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.TasksBusiness:assigned', null, null)"
+				}
+			},
+			{
+				"fieldName": "cronappuser_email",
+				"fieldValue": {
+					"blocklyClass": "blockly.UserSkillsBusiness",
+					"blocklyMethod": "getEmailfromLoggedUser",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UserSkillsBusiness",
+						"classNameNew": "UserSkillsBusiness",
+						"classNameOld": "UserSkillsBusiness",
+						"sourcePath": "src/main/java/blockly/UserSkillsBusiness.blockly",
+						"language": "java",
+						"class": "blockly.UserSkillsBusiness",
+						"methods": [
+							{
+								"name": "checkDuplicate",
+								"hasReturn": "true",
+								"params": [
+									"Entidade<app.entity.UserSkills>"
+								]
+							},
+							{
+								"name": "getEmailfromLoggedUser",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UserSkillsBusiness:getEmailfromLoggedUser', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"title": null,
+			"description": null,
+			"price": null,
+			"cronappuser_email": null,
+			"assignmentDate": null,
+			"document": null,
+			"status": null,
+			"project": null
+		},
+		"security": {
+			"id": null,
+			"title": null,
+			"description": null,
+			"price": null,
+			"cronappuser_email": null,
+			"assignmentDate": null,
+			"document": null,
+			"status": null,
+			"project": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/t84459ywot9z/"
+	},
+	"sl65rte45ueq": {
+		"customId": "statuslist",
+		"queryName": "taskstatuslist",
+		"screen": "src/main/webapp/views/admin/task.view.html",
+		"sourceType": "blockly",
+		"blockly": {
+			"blocklyClass": "blockly.TasksBusiness",
+			"blocklyMethod": "status_list",
+			"blocklyLanguage": "java",
+			"blocklyJson": {
+				"namespace": "blockly.TasksBusiness",
+				"classNameNew": "TasksBusiness",
+				"classNameOld": "TasksBusiness",
+				"sourcePath": "src/main/java/blockly/TasksBusiness.blockly",
+				"language": "java",
+				"class": "blockly.TasksBusiness",
+				"methods": [
+					{
+						"name": "requested",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "assignToMe",
+						"hasReturn": "false",
+						"params": []
+					},
+					{
+						"name": "status_list",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "assigned",
+						"hasReturn": "true",
+						"params": []
+					},
+					{
+						"name": "todo",
+						"hasReturn": "true",
+						"params": []
+					}
+				]
+			},
+			"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.TasksBusiness:status_list', null, null)",
+			"blocklyGETMethod": "status_list",
+			"blocklyPOSTMethod": "status_list",
+			"blocklyPUTMethod": "status_list",
+			"blocklyDELETEMethod": "status_list",
+			"blocklyFILTERMethod": "status_list"
+		},
+		"entitySimpleName": null,
+		"entityFullName": null,
+		"query": "",
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {},
+		"security": {},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/sl65rte45ueq/"
+	},
+	"1hb862q5eml41": {
+		"customId": "reqTasks",
+		"queryName": "reqTasks",
+		"screen": "src/main/webapp/views/admin/requestedTasks.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Task",
+		"entityFullName": "app.entity.Task",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Task",
+					"namespace": "app.entity.Task",
+					"alias": "t"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "t",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [
+				{
+					"func": "get",
+					"field": "t.project.title",
+					"order": "asc"
+				},
+				{
+					"func": "get",
+					"field": "t.title",
+					"order": "asc"
+				}
+			],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "t.status",
+						"field": "t.status",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":status",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": false,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "status",
+				"fieldValue": {
+					"blocklyClass": "blockly.TasksBusiness",
+					"blocklyMethod": "requested",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.TasksBusiness",
+						"classNameNew": "TasksBusiness",
+						"classNameOld": "TasksBusiness",
+						"sourcePath": "src/main/java/blockly/TasksBusiness.blockly",
+						"language": "java",
+						"class": "blockly.TasksBusiness",
+						"methods": [
+							{
+								"name": "status_list",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "requested",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "assignToMe",
+								"hasReturn": "false",
+								"params": []
+							},
+							{
+								"name": "assigned",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "todo",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.TasksBusiness:requested', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"title": null,
+			"description": null,
+			"price": null,
+			"cronappuser_email": null,
+			"assignmentDate": null,
+			"document": null,
+			"status": null,
+			"project": null
+		},
+		"security": {
+			"id": null,
+			"title": null,
+			"description": null,
+			"price": null,
+			"cronappuser_email": null,
+			"assignmentDate": null,
+			"document": null,
+			"status": null,
+			"project": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1hb862q5eml41/"
+	},
+	"vf3na3x441ma": {
+		"customId": "requestedTasks",
+		"queryName": "requestedTasks",
+		"screen": "src/main/webapp/views/admin/requestedTasks.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Task",
+		"entityFullName": "app.entity.Task",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Task",
+					"namespace": "app.entity.Task",
+					"alias": "t"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "t",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "t.status",
+						"field": "t.status",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":status",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": false,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "status",
+				"fieldValue": {
+					"blocklyClass": "blockly.TasksBusiness",
+					"blocklyMethod": "requested",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.TasksBusiness",
+						"classNameNew": "TasksBusiness",
+						"classNameOld": "TasksBusiness",
+						"sourcePath": "src/main/java/blockly/TasksBusiness.blockly",
+						"language": "java",
+						"class": "blockly.TasksBusiness",
+						"methods": [
+							{
+								"name": "assignToMe",
+								"hasReturn": "false",
+								"params": []
+							},
+							{
+								"name": "status_list",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "requested",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "assigned",
+								"hasReturn": "true",
+								"params": []
+							},
+							{
+								"name": "todo",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.TasksBusiness:requested', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"title": null,
+			"description": null,
+			"price": null,
+			"cronappuser_email": null,
+			"assignmentDate": null,
+			"document": null,
+			"status": null,
+			"project": null
+		},
+		"security": {
+			"id": null,
+			"title": null,
+			"description": null,
+			"price": null,
+			"cronappuser_email": null,
+			"assignmentDate": null,
+			"document": null,
+			"status": null,
+			"project": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/vf3na3x441ma/"
+	},
+	"1jefyzetgmdlx": {
+		"customId": "usertasks",
+		"queryName": "usertasks",
+		"screen": "src/main/webapp/views/logged/mytasks.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Task",
+		"entityFullName": "app.entity.Task",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Task",
+					"namespace": "app.entity.Task",
+					"alias": "t"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "t",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "t.cronappuser_email",
+						"field": "t.cronappuser_email",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":cronappuser_email",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": false,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "cronappuser_email",
+				"fieldValue": {
+					"blocklyClass": "blockly.UserSkillsBusiness",
+					"blocklyMethod": "getEmailfromLoggedUser",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UserSkillsBusiness",
+						"classNameNew": "UserSkillsBusiness",
+						"classNameOld": "UserSkillsBusiness",
+						"sourcePath": "src/main/java/blockly/UserSkillsBusiness.blockly",
+						"language": "java",
+						"class": "blockly.UserSkillsBusiness",
+						"methods": [
+							{
+								"name": "checkDuplicate",
+								"hasReturn": "true",
+								"params": [
+									"Entidade<app.entity.UserSkills>"
+								]
+							},
+							{
+								"name": "getEmailfromLoggedUser",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UserSkillsBusiness:getEmailfromLoggedUser', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"title": null,
+			"description": null,
+			"price": null,
+			"cronappuser_email": null,
+			"assignmentDate": null,
+			"document": null,
+			"status": null,
+			"project": null
+		},
+		"security": {
+			"id": null,
+			"title": null,
+			"description": null,
+			"price": null,
+			"cronappuser_email": null,
+			"assignmentDate": null,
+			"document": null,
+			"status": null,
+			"project": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1jefyzetgmdlx/"
+	},
+	"vf6eck9p7pdj": {
+		"customId": "userord",
+		"queryName": "userord",
+		"screen": "src/main/webapp/views/admin/userskillsAll.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"namespace": "app.entity.User",
+					"alias": "u"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [
+				{
+					"func": "get",
+					"field": "u.email",
+					"order": "asc"
+				}
+			],
+			"rules": {
+				"condition": "AND",
+				"rules": [],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"resume": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"resume": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/vf6eck9p7pdj/"
+	},
+	"rkzkigkpjw4m": {
+		"customId": "skillord",
+		"queryName": "skillord",
+		"screen": "src/main/webapp/views/admin/userskillsAll.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "Skill",
+		"entityFullName": "app.entity.Skill",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "Skill",
+					"namespace": "app.entity.Skill",
+					"alias": "s"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "s",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [
+				{
+					"func": "get",
+					"field": "s.skill",
+					"order": "asc"
+				}
+			],
+			"rules": {
+				"condition": "AND",
+				"rules": [],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"skill": null,
+			"skillCat": null
+		},
+		"security": {
+			"id": null,
+			"skill": null,
+			"skillCat": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/rkzkigkpjw4m/"
+	},
+	"ubu8ll5si9nl": {
+		"customId": "UserOrd2",
+		"queryName": "UserOrd2",
+		"screen": "src/main/webapp/views/admin/user.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"namespace": "app.entity.User",
+					"alias": "u"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [
+				{
+					"func": "get",
+					"field": "u.name",
+					"order": "asc"
+				}
+			],
+			"rules": {
+				"condition": "AND",
+				"rules": [],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"resume": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"resume": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/ubu8ll5si9nl/"
+	},
+	"1k22buemnycmb": {
+		"customId": "userfilter",
+		"queryName": "userfilter",
+		"screen": "",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"alias": "u",
+					"namespace": "app.entity.User"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"not": false,
+				"valid": true,
+				"rules": []
+			}
+		},
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"resume": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"resume": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/1k22buemnycmb/"
+	},
+	"rhr626rfnkmw": {
+		"customId": "LoggerUserSkills",
+		"queryName": "loggeduserskills",
+		"screen": "src/main/webapp/views/logged/userskills.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "UserSkills",
+		"entityFullName": "app.entity.UserSkills",
+		"query": {
+			"isValid": true,
+			"isEmpty": false,
+			"operationType": "object",
+			"type": "select",
+			"rulesEntity": [
+				{
+					"entity": "UserSkills",
+					"namespace": "app.entity.UserSkills",
+					"alias": "u"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u",
+					"type": "string"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"rules": [
+					{
+						"id": "u.user.login",
+						"field": "u.user.login",
+						"type": "string",
+						"input": "text",
+						"operator": "equal",
+						"value": ":userLogin",
+						"valueIsField": false
+					}
+				],
+				"not": false,
+				"valid": true
+			},
+			"isRawSql": false,
+			"multiTenant": true,
+			"paginatorAutomatic": false
+		},
+		"queryParamsValues": [
+			{
+				"fieldName": "userLogin",
+				"fieldValue": {
+					"blocklyClass": "blockly.UserSkillsBusiness",
+					"blocklyMethod": "getLoginfromLoggedUser",
+					"blocklyLanguage": "java",
+					"blocklyJson": {
+						"namespace": "blockly.UserSkillsBusiness",
+						"classNameNew": "UserSkillsBusiness",
+						"classNameOld": "UserSkillsBusiness",
+						"sourcePath": "src/main/java/blockly/UserSkillsBusiness.blockly",
+						"language": "java",
+						"class": "blockly.UserSkillsBusiness",
+						"methods": [
+							{
+								"name": "checkDuplicate",
+								"hasReturn": "true",
+								"params": [
+									"Entidade<app.entity.UserSkills>"
+								]
+							},
+							{
+								"name": "getSkillsfromUser",
+								"hasReturn": "true",
+								"params": [
+									"userid"
+								]
+							},
+							{
+								"name": "getLoginfromLoggedUser",
+								"hasReturn": "true",
+								"params": []
+							}
+						]
+					},
+					"blocklyFunctionCall": "cronapi.util.makeCallServerBlocklyAsync('blockly.UserSkillsBusiness:getLoginfromLoggedUser', null, null)"
+				}
+			}
+		],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"level": null,
+			"skill": null,
+			"attachment": null,
+			"user": null
+		},
+		"security": {
+			"id": null,
+			"level": null,
+			"skill": null,
+			"attachment": null,
+			"user": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/rhr626rfnkmw/"
+	},
+	"getskilllevels": {
+		"customId": "getskilllevels",
+		"queryName": "getskilllevels",
+		"screen": "src/main/webapp/views/admin/usercomplete.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "SkillLevel",
+		"entityFullName": "app.entity.SkillLevel",
+		"query": {
+			"isValid": true,
+			"rulesEntity": [
+				{
+					"entity": "SkillLevel",
+					"alias": "s",
+					"namespace": "app.entity.SkillLevel"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "s"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"not": false,
+				"valid": true,
+				"rules": []
+			}
+		},
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"level": null
+		},
+		"security": {
+			"id": null,
+			"level": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/getskilllevels/"
+	},
+	"vbmx1azk0qid": {
+		"customId": "getAllUsers",
+		"queryName": "getAllUsers",
+		"screen": "src/main/webapp/views/admin/new.user.view.html",
+		"sourceType": "entityFullName",
+		"blockly": null,
+		"entitySimpleName": "User",
+		"entityFullName": "app.entity.User",
+		"query": {
+			"isValid": true,
+			"rulesEntity": [
+				{
+					"entity": "User",
+					"alias": "u",
+					"namespace": "app.entity.User"
+				}
+			],
+			"rulesSelect": [
+				{
+					"func": "get",
+					"field": "u"
+				}
+			],
+			"rulesGroupBy": [],
+			"rulesHaving": [],
+			"rulesOrderBy": [],
+			"rules": {
+				"condition": "AND",
+				"not": false,
+				"valid": true,
+				"rules": []
+			}
+		},
+		"queryParamsValues": [],
+		"verbs": {
+			"GET": true,
+			"GETAuthorities": null,
+			"POST": true,
+			"POSTAuthorities": null,
+			"PUT": true,
+			"PUTAuthorities": null,
+			"DELETE": true,
+			"DELETEAuthorities": null,
+			"FILTER": true,
+			"FILTERAuthorities": null
+		},
+		"events": {
+			"beforeInsert": null,
+			"beforeUpdate": null,
+			"beforeDelete": null,
+			"afterInsert": null,
+			"afterUpdate": null,
+			"afterDelete": null,
+			"onNavigate": null,
+			"onGetData": null
+		},
+		"defaultValues": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"resume": null,
+			"weekly_availability": null
+		},
+		"security": {
+			"id": null,
+			"email": null,
+			"name": null,
+			"login": null,
+			"picture": null,
+			"password": null,
+			"theme": null,
+			"resume": null,
+			"weekly_availability": null
+		},
+		"calcFields": {},
+		"calcFieldsSecurity": {},
+		"errorHandles": {
+			"primaryKey": null,
+			"foreignKey": null
+		},
+		"serviceUrl": "api/cronapi/query/vbmx1azk0qid/"
+	}
+}

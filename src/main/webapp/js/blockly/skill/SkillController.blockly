@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="" resourceType="JS" ruleDescription="SkillController" ruleName="SkillController" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="664.4208984375005" scrolly="-92.00000000000017" target="7h+wWmlPQ%f2H2Z.JI+C"/>
+  <block colour="#995ba5" id="rQYPyC[xw~dyT]PKZI*Y" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-137" y="152">
+    <mutation>
+      <arg name="myClickEvent"/>
+    </mutation>
+    <field name="NAME">openMdDialog</field>
+    <comment h="80" pinned="false" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block colour="#a55b80" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="TmRKC}i+znRM8WiXYm*H" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">finalChip</field>
+        <value name="VALUE">
+          <block colour="#61C200" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="0Tf!o:Hn0dXe#VXrQt!q" multilayer="false" namespace="cronapi.myfunctions.createEmptyObject" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EcreateEmptyObject%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20String%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.myfunctions.createEmptyObject%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.myfunctions.createEmptyObject%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.myfunctions.createEmptyObject}}" return-raw-type="undefined"/>
+          </block>
+        </value>
+        <next>
+          <block colour="#61C200" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="bZ,$cF81Ez+(-SaE%/nV" multilayer="false" namespace="cronapi.myfunctions.setObjectValueNoReturn" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3ESet%20Object%20Value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20Description%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Key%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Value%20:%20Object%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.myfunctions.setObjectValueNoReturn%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.myfunctions.setObjectValueNoReturn%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+            <mutation name="{{cronapi.myfunctions.setObjectValueNoReturn}}" return-raw-type="undefined">
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Object"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Key"/>
+              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Value"/>
+            </mutation>
+            <value name="ARG0">
+              <block colour="#a55b80" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="#g?Cv=+WiQ|Afy-+UyXQ" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">finalChip</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <shadow colour="#5ba593" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="^3c$b~v=HzUQaT]fT,-e" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field name="TEXT">contentElement</field>
+              </shadow>
+            </value>
+            <value name="ARG2">
+              <block colour="#5ba593" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="5CRn_L-:)}7qi6*CBvgt" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field name="TEXT">#myDialog</field>
+              </block>
+            </value>
+            <next>
+              <block colour="#61C200" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="NrT@T*59oCXq6MjhhJkL" multilayer="false" namespace="cronapi.myfunctions.setObjectValueNoReturn" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3ESet%20Object%20Value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20Description%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Key%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Value%20:%20Object%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.myfunctions.setObjectValueNoReturn%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.myfunctions.setObjectValueNoReturn%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                <mutation name="{{cronapi.myfunctions.setObjectValueNoReturn}}" return-raw-type="undefined">
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Object"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Key"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Value"/>
+                </mutation>
+                <value name="ARG0">
+                  <block colour="#a55b80" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="e];R^R2H/,i)7J1b$gg%" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">finalChip</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <shadow colour="#5ba593" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="Vyf[qsuJW@%28JWr+K=T" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">targetEvent</field>
+                  </shadow>
+                </value>
+                <value name="ARG2">
+                  <block colour="#a55b80" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="e,:hf?$FamOqRKar#bhn" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">myClickEvent</field>
+                  </block>
+                </value>
+                <next>
+                  <block colour="#61C200" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="Mq3cMv?QHT7J/c[zb*_a" multilayer="false" namespace="cronapi.myfunctions.setObjectValueNoReturn" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3ESet%20Object%20Value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20Description%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Key%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Value%20:%20Object%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.myfunctions.setObjectValueNoReturn%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.myfunctions.setObjectValueNoReturn%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                    <mutation name="{{cronapi.myfunctions.setObjectValueNoReturn}}" return-raw-type="undefined">
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Object"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Key"/>
+                      <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Value"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block colour="#a55b80" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="9lb3ES?/7ONX!)u4ukCC" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                        <field name="VAR">finalChip</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <shadow colour="#5ba593" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="RQk^LuXfZH}B!yqf4o*(" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">clickOutsideToClose</field>
+                      </shadow>
+                    </value>
+                    <value name="ARG2">
+                      <block colour="#5b80a5" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="ewdfxV#y]FPsVOCEW1Jf" origintype="logic_boolean" output="true" tooltip="Returns either true or false." type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block colour="#61C200" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="F#4F_vZz@Aq1trK^*nrj" multilayer="false" namespace="cronapi.myfunctions.setObjectValueNoReturn" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3ESet%20Object%20Value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20Description%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Key%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Value%20:%20Object%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.myfunctions.setObjectValueNoReturn%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.myfunctions.setObjectValueNoReturn%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                        <mutation name="{{cronapi.myfunctions.setObjectValueNoReturn}}" return-raw-type="undefined">
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Object"/>
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Key"/>
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Value"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block colour="#a55b80" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="oxAX7z=PxXbK^uWAz$F%" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                            <field name="VAR">finalChip</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <shadow colour="#5ba593" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="~1G4vU6z]111%`N4/?{M" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">title</field>
+                          </shadow>
+                        </value>
+                        <value name="ARG2">
+                          <block colour="#5ba593" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="2C5s(^CrqHH[45IlGw|4" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">User</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block colour="#614D09" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="}f!DVaiJa(`p(ZIvVnX1" multilayer="false" namespace="cronapi.myfunctions.showMdDialog" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EshowMdDialog%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20Description%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Parameter%20:%20Object%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.myfunctions.showMdDialog%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.myfunctions.showMdDialog%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                            <mutation name="{{cronapi.myfunctions.showMdDialog}}" return-raw-type="undefined">
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Parameter"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block colour="#a55b80" dependencyby="rQYPyC[xw~dyT]PKZI*Y" id="nAZ/aZ;w$miA?tpAyq,m" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                                <field name="VAR">finalChip</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-157" y="158">
+    <mutation>
+      <arg name="searchedSkill"/>
+    </mutation>
+    <field name="NAME">getSkills</field>
+    <comment h="80" pinned="false" w="160">SkillController</comment>
+    <value name="RETURN">
+      <block colour="#487f7f" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="FD+BYODtP$`JJXs3.5oV" multilayer="false" namespace="cronapi.util.callServerBlockly" origintype="procedures_callblockly_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3ECall%20blockly%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3Efunction%20to%20block%20server%20call%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Blockly%20name%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.callServerBlockly%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.callServerBlockly%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callblockly_callreturn">
+        <mutation data="%7B%22name%22:%22UserSkillController%22,%22class%22:%22blockly.userskill.UserSkillController%22,%22function%22:%22getSkills%22,%22oldName%22:%22getSkills%22,%22params%22:%22%5B%5C%22searchedSkill%5C%22%5D%22,%22type%22:%22java%22,%22namespace%22:%22blockly.userskill.UserSkillController%22%7D" name="{{cronapi.util.callServerBlockly}}">
+          <arg name="searchedSkill"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="2`Jm$Bt,Hmgg0}+6#pmI" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+            <field name="VAR">searchedSkill</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+  <block colour="#995ba5" id="7h+wWmlPQ%f2H2Z.JI+C" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-487" y="188">
+    <mutation>
+      <arg name="currentChip"/>
+      <arg name="addedChips"/>
+    </mutation>
+    <field name="NAME">addSkillChip</field>
+    <comment h="80" pinned="false" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block colour="#a55b80" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="*2G,Gb8jsFk]7L84_p`Q" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+        <field name="VAR">flag</field>
+        <value name="VALUE">
+          <block colour="#5b80a5" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="WS|rVFX~KhqTDO)2Pkod" origintype="logic_boolean" output="true" tooltip="Returns either true or false." type="logic_boolean">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block colour="#5ba55b" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="Myyb=rNmw~jb^t5i:qL`" origintype="controls_forEach" output="false" tooltip="Do some statements several times." type="controls_forEach">
+            <field name="VAR">i</field>
+            <value name="LIST">
+              <block colour="#a55b80" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="5%0=]l=XZb{D@rkPA3TY" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                <field name="VAR">addedChips</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block colour="#5b80a5" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="$_FB|jD(49*!*n:9/:uD" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+                <value name="IF0">
+                  <block colour="#5b80a5" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="EYttF2ksJ}nCIuEHeBl_" origintype="logic_compare" output="true" tooltip="function () { [native code] }" type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block colour="#404340" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="^]~D7:F.)b[+-R63v/mH" multilayer="false" namespace="cronapi.object.getProperty" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20Property%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20object%20property.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Property%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.object.getProperty%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.object.getProperty%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                        <mutation name="{{cronapi.object.getProperty}}" return-raw-type="undefined">
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Object"/>
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Property"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block colour="#404340" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="~YeP]|Z-N+gAT91n}K4M" multilayer="false" namespace="cronapi.object.getProperty" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20Property%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20object%20property.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Property%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.object.getProperty%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.object.getProperty%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                            <mutation name="{{cronapi.object.getProperty}}" return-raw-type="undefined">
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Object"/>
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Property"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block colour="#a55b80" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="jf)CvUs~aHdolJ3W%z`[" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                                <field name="VAR">i</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <shadow colour="#5ba593" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="Xz%pYwk)MTK$}9Q$rVXP" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">skill</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <shadow colour="#5ba593" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="/~saaj:6xk6DOO~wV|`F" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">id</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block colour="#404340" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="El^3-gC!)W8QxO/gc}n(" multilayer="false" namespace="cronapi.object.getProperty" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20Property%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20object%20property.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Property%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.object.getProperty%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.object.getProperty%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                        <mutation name="{{cronapi.object.getProperty}}" return-raw-type="undefined">
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Object"/>
+                          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Property"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block colour="#404340" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="cNN^9Vq5o@}v4^`R+:mb" multilayer="false" namespace="cronapi.object.getProperty" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20Property%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20object%20property.%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Property%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.object.getProperty%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.object.getProperty%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                            <mutation name="{{cronapi.object.getProperty}}" return-raw-type="undefined">
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.OBJECT" name="Object"/>
+                              <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Property"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block colour="#a55b80" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="3T_#r}u,riuf@XR4Ig}Z" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                                <field name="VAR">currentChip</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <shadow colour="#5ba593" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="C,;LXI6i.ylg+Sy3^#`8" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">skill</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <shadow colour="#5ba593" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="J=QUMBPrtbm4uS]JjBJM" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">id</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block colour="#a55b80" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="+[v2D0%x5PChRY4CoK17" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+                    <field name="VAR">flag</field>
+                    <value name="VALUE">
+                      <block colour="#5b80a5" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="A^|Ja4`hq$+;8wC,^@ex" origintype="logic_boolean" output="true" tooltip="Returns either true or false." type="logic_boolean">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+            <next>
+              <block colour="#995ba5" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="aw/w(kJdO~t|UF5O)%jX" origintype="procedures_ifreturn" output="false" tooltip="If a value is true, then return a second value." type="procedures_ifreturn">
+                <mutation value="1"/>
+                <value name="CONDITION">
+                  <block colour="#a55b80" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id=")Dt%MN~c,pmZ|?Ewf*1h" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                    <field name="VAR">flag</field>
+                  </block>
+                </value>
+                <value name="VALUE">
+                  <block colour="#5b80a5" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="O92T~3^y1ODOpZ[%J;EK" origintype="logic_null" output="true" tooltip="Returns null." type="logic_null"/>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block colour="#a55b80" dependencyby="7h+wWmlPQ%f2H2Z.JI+C" id="f)`CSfd`gLesEYhNwRyj" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+        <field name="VAR">currentChip</field>
+      </block>
+    </value>
+  </block>
+</blockly>

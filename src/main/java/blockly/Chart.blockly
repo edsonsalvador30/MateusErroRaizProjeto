@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="src/main/webapp/views/logged/home.view.html" resourceType="JAVA" ruleDescription="Chart" ruleName="Chart" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
+  <metadata scale="1" scrollx="796.9999999999993" scrolly="-627.5000000000002" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-352" y="98">
+    <field name="NAME">chartCreate</field>
+    <comment h="80" pinned="false" w="160">Chart</comment>
+    <statement name="STACK">
+      <block colour="#5ba58c" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="QB!ACxcCR{3^Lk=jDpNP" origintype="text_print" output="false" tooltip="Print the specified text, number or other value." type="text_print">
+        <value name="TEXT">
+          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="pL.~BE+K.#]Tm(ZO5=sT" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">abc</field>
+          </shadow>
+        </value>
+        <next>
+          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="t~Te1tzWnW*(_qdt^p.m" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+            <field name="VAR">months</field>
+            <value name="VALUE">
+              <block colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="C,3*pN,vQR`EO|k]KN@#" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+                <mutation data="%7B%22queryBuilderJson%22:%7B%22isEmpty%22:true,%22isRawSql%22:true,%22sqlContent%22:%22select%20m.name%20from%20User%20u,%20Month%20m%20where%20m.num%20=%20extract(month%20u.creation_date)%20group%20by%20m.name%20order%20by%20m.num%20asc%22,%22multiTenant%22:true,%22paginatorAutomatic%22:false%7D,%22entity%22:%22User%22,%22entityFullName%22:%22app.entity.User%22,%22filter%22:%22select%20m.name%20from%20User%20u,%20Month%20m%20where%20m.num%20=%20extract(month%20u.creation_date)%20group%20by%20m.name%20order%20by%20m.num%20asc%22,%22params%22:%22%5B%5D%22%7D" name="{{cronapi.database.Operations.query}}"/>
+              </block>
+            </value>
+            <next>
+              <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%$x~$w4MA@v0-(UglVCT" origintype="variables_set" output="false" tooltip="Sets this variable to be equal to the input." type="variables_set">
+                <field name="VAR">skillsCategory</field>
+                <value name="VALUE">
+                  <block colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{.(dAD,$/G95Rvny9v?," multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+                    <mutation data="%7B%22queryBuilderJson%22:%7B%22isEmpty%22:true,%22isRawSql%22:true,%22sqlContent%22:%22select%20m.name%20from%20User%20u,%20Month%20m%20where%20m.num%20=%20extract(month%20u.creation_date)%20group%20by%20m.name%20order%20by%20m.num%20asc%22,%22multiTenant%22:true,%22paginatorAutomatic%22:false%7D,%22entity%22:%22User%22,%22entityFullName%22:%22app.entity.User%22,%22filter%22:%22select%20m.name%20from%20User%20u,%20Month%20m%20where%20m.num%20=%20extract(month%20u.creation_date)%20group%20by%20m.name%20order%20by%20m.num%20asc%22,%22params%22:%22%5B%5D%22%7D" name="{{cronapi.database.Operations.query}}"/>
+                  </block>
+                </value>
+                <next>
+                  <block colour="#f582a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="=4hL.D`,S|%nT(VU4Q~m" multilayer="false" namespace="cronapi.chart.Operations.createChart" origintype="procedures_arbitrary_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3ECreate%20chart%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20create%20a%20chart%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Id%20:%20Object%3C/span%3E%3Cdiv%3E%20Chart%20id%20(canvas)%3C/div%3E%3Cspan%3E%20-%20Chart%20type%20:%20String%3C/span%3E%3Cdiv%3E%20Chart%20type%20to%20be%20created%3C/div%3E%3Cspan%3E%20-%20Legends%20:%20Object%3C/span%3E%3Cdiv%3E%20Chart%20legends%3C/div%3E%3Cspan%3E%20-%20Options=Chart%20options%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Chart%20serie(s)%20:%20Object%3C/span%3E%3Cdiv%3E%20Set%20of%20chart%20series%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.chart.Operations.createChart%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.chart.Operations.createChart%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_arbitrary_callnoreturn">
+                    <mutation items="5" name="{{cronapi.chart.Operations.createChart}}">
+                      <arg name="Id"/>
+                      <arg name="Chart type"/>
+                      <arg name="Legends"/>
+                      <arg name="Options=Chart options"/>
+                      <arg name="Chart serie(s)"/>
+                    </mutation>
+                    <value name="ARG0">
+                      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{KFsD1lRewA1zG4+M4eY" origintype="ids_from_screen" output="true" type="ids_from_screen">
+                        <field name="SELECT">chart3239</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block colour="#f582a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="=*Y{4_!A[iRDJ#@8TOd~" origintype="util_dropdown" output="true" type="util_dropdown">
+                        <mutation>
+                          <arg name="line" value="line"/>
+                          <arg name="bar" value="bar"/>
+                          <arg name="doughnut" value="doughnut"/>
+                          <arg name="pie" value="pie"/>
+                          <arg name="polarArea" value="Polar Area"/>
+                        </mutation>
+                        <field name="SELECT">doughnut</field>
+                      </block>
+                    </value>
+                    <value name="ARG2">
+                      <block colour="#745ba5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="SCFbxA`%`XO_OBlF$!eO" origintype="lists_create_with" output="true" tooltip="Create a list with any number of items." type="lists_create_with">
+                        <mutation items="7"/>
+                        <value name="ADD0">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="X8C@@:t;=fO,g3hJDm}." origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">BackEnd</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Yax#?CDqVxG[BN]DuaC^" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">FrontEnd</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="S]sc@ud?^_}};]CuLLtp" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Mobile</field>
+                          </block>
+                        </value>
+                        <value name="ADD3">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="a;$f=*BxkM^f}`:H/sKx" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Consulting</field>
+                          </block>
+                        </value>
+                        <value name="ADD4">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="`Mj8$4Ns3dpv.QAV;_h?" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Tester</field>
+                          </block>
+                        </value>
+                        <value name="ADD5">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="((LU?_|+UxT)j*!b.Rq-" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">DataBase</field>
+                          </block>
+                        </value>
+                        <value name="ADD6">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="m!Vi9Gwds9[Zqc~)}L4w" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">UX</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="ARG3">
+                      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Fxx0kv5[]_$h$2-|LLKj" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                        <field name="TEXT">{
+    "responsive":true,
+    "legend": {
+      "display": true,
+      "position": "left",
+      "labels": {
+        "fontColor": "#000080"
+      }
+    },
+    "animation": {
+       "animateScale":true,
+       "animateRotate":true
+    },
+    "title":{
+      "display": true,
+      "text": "Habilidades por Usuários"
+    }
+}</field>
+                      </block>
+                    </value>
+                    <value name="ARG4">
+                      <block colour="#f582a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="nFJAs3{LMfOltg)ME?;5" multilayer="false" namespace="cronapi.chart.Operations.createChartSerie" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3ECreate%20serie%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20create%20a%20chart%20serie%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Serie%20name%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Data%20:%20Object%3C/span%3E%3Cdiv%3E%20Serie%20data%3C/div%3E%3Cspan%3E%20-%20Options%20:%20Object%3C/span%3E%3Cdiv%3E%20Serie%20Options%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.chart.Operations.createChartSerie%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.chart.Operations.createChartSerie%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                        <mutation name="{{cronapi.chart.Operations.createChartSerie}}" return-raw-type="cronapi.Var">
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Serie name"/>
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Data"/>
+                          <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Options"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ye!2^{Y{euDkyFepFbq)" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">Skills/User</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block colour="#745ba5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="$^}$+Hrf.fUBy`:ZPBsd" origintype="lists_create_with" output="true" tooltip="Create a list with any number of items." type="lists_create_with">
+                            <mutation items="7"/>
+                            <value name="ADD0">
+                              <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="R[A$}p+RT/uhk]*l~H!;" origintype="math_random_int" output="true" tooltip="Return a random integer between the two specified limits, inclusive." type="math_random_int">
+                                <value name="FROM">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}r@0fK`HB69EP0[Dd7_4" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                                <value name="TO">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="]iCyzD@iKZ7~yyr+,kpT" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD1">
+                              <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="zcx=Ull_j(I#Xxhcr[:y" origintype="math_random_int" output="true" tooltip="Return a random integer between the two specified limits, inclusive." type="math_random_int">
+                                <value name="FROM">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="fx;JP8%#(f7R{:7t!f.W" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                                <value name="TO">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="N|prG;=DaW7]CnF=E$eA" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD2">
+                              <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="(L`(+eBMN16ofY0tdXEC" origintype="math_random_int" output="true" tooltip="Return a random integer between the two specified limits, inclusive." type="math_random_int">
+                                <value name="FROM">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}5C3t*l$%zplx=nJiTYF" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                                <value name="TO">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="(fY/gUlpiQ`RZZ{f]F%d" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD3">
+                              <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="JE@TRZ1R|ujk=)^TPtUA" origintype="math_random_int" output="true" tooltip="Return a random integer between the two specified limits, inclusive." type="math_random_int">
+                                <value name="FROM">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="dEs4:;tinOG-vc_3y`io" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                                <value name="TO">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@r,iQC99[^w[f|L3BU@," origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD4">
+                              <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="yXf,PuG)jd~:*-Qu!/s7" origintype="math_random_int" output="true" tooltip="Return a random integer between the two specified limits, inclusive." type="math_random_int">
+                                <value name="FROM">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="!Cyh6]4XbnHtzE_0B{Co" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                                <value name="TO">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="i}q5J++kKL^PC!17nnAV" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD5">
+                              <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=",g1_uLr7GYQ|F@oaSEpv" origintype="math_random_int" output="true" tooltip="Return a random integer between the two specified limits, inclusive." type="math_random_int">
+                                <value name="FROM">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="-MHG?|YiZ$FUd.L-l%^j" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                                <value name="TO">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="8[C_$_jV];R~bwm_hJvi" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="ADD6">
+                              <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="--h$DTS?eDtNLxDA{0ek" origintype="math_random_int" output="true" tooltip="Return a random integer between the two specified limits, inclusive." type="math_random_int">
+                                <value name="FROM">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="02J[^x33YeOia=}k}M,@" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                                <value name="TO">
+                                  <shadow colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="so~.}Syk!9gqj~W0ic[1" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+                                    <field name="NUM">10</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block colour="#f582a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="W_}_z[:|A6%bu$EI(8k*" multilayer="false" namespace="cronapi.chart.Operations.createChart" origintype="procedures_arbitrary_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="Run the user-defined function 'Create chart'." type="procedures_arbitrary_callnoreturn">
+                        <mutation items="5" name="{{cronapi.chart.Operations.createChart}}">
+                          <arg name="Id"/>
+                          <arg name="Chart type"/>
+                          <arg name="Legends"/>
+                          <arg name="Options=Chart options"/>
+                          <arg name="Chart serie(s)"/>
+                        </mutation>
+                        <value name="ARG0">
+                          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="yqc~a|l|_q!Ug!n+[Uu9" origintype="ids_from_screen" output="true" type="ids_from_screen">
+                            <field name="SELECT">chart7952</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block colour="#f582a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}-}ES7*CY;euKJh-,bn:" origintype="util_dropdown" output="true" type="util_dropdown">
+                            <mutation>
+                              <arg name="line" value="line"/>
+                              <arg name="bar" value="bar"/>
+                              <arg name="doughnut" value="doughnut"/>
+                              <arg name="pie" value="pie"/>
+                              <arg name="polarArea" value="Polar Area"/>
+                            </mutation>
+                            <field name="SELECT">bar</field>
+                          </block>
+                        </value>
+                        <value name="ARG2">
+                          <block colour="#a55b80" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="TFogBe[{JF[{gwHwp/]F" origintype="variables_get" output="true" tooltip="Returns the value of this variable." type="variables_get">
+                            <field name="VAR">months</field>
+                          </block>
+                        </value>
+                        <value name="ARG3">
+                          <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="x2d.K.kPoMD^%(lIs9b4" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                            <field name="TEXT">{
+    "responsive":true,
+    "animation": {
+       "animateScale":true,
+       "animateRotate":true
+    },
+    "title":{
+      "display": true,
+      "text": "Usuários por Mês"
+    }
+}</field>
+                          </block>
+                        </value>
+                        <value name="ARG4">
+                          <block colour="#f582a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Yi!8=T;bS4yzux~!#/0^" multilayer="false" namespace="cronapi.chart.Operations.createChartSerie" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3ECreate%20serie%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20create%20a%20chart%20serie%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Serie%20name%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Data%20:%20Object%3C/span%3E%3Cdiv%3E%20Serie%20data%3C/div%3E%3Cspan%3E%20-%20Options%20:%20Object%3C/span%3E%3Cdiv%3E%20Serie%20Options%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.chart.Operations.createChartSerie%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.chart.Operations.createChartSerie%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+                            <mutation name="{{cronapi.chart.Operations.createChartSerie}}" return-raw-type="cronapi.Var">
+                              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Serie name"/>
+                              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Data"/>
+                              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.OBJECT" name="Options"/>
+                            </mutation>
+                            <value name="ARG0">
+                              <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Ha=vPh`}P%aXR@zmtNTv" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                                <field name="TEXT">User</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block colour="#db802b" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="S_#B$UeM:vEi_=fIe.JN" multilayer="false" namespace="cronapi.database.Operations.query" origintype="procedures_sql_callreturn" output="true" returntype="ObjectType.DATASET" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EOpen%20query%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20retrieve%20data%20from%20database%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Entity%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Query%20params%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20DataSet%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.query%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_callreturn">
+                                <mutation data="%7B%22queryBuilderJson%22:%7B%22isEmpty%22:true,%22isRawSql%22:true,%22sqlContent%22:%22select%20COUNT(u.id)%20from%20User%20u%20%20where%20u.creation_date%20!=%20null%20group%20by%20extract(month%20u.creation_date)%20order%20by%20extract(month%20u.creation_date)%20asc%22,%22multiTenant%22:true,%22paginatorAutomatic%22:false%7D,%22entity%22:%22User%22,%22entityFullName%22:%22app.entity.User%22,%22filter%22:%22select%20COUNT(u.id)%20from%20User%20u%20%20where%20u.creation_date%20!=%20null%20group%20by%20extract(month%20u.creation_date)%20order%20by%20extract(month%20u.creation_date)%20asc%22,%22params%22:%22%5B%5D%22%7D" name="{{cronapi.database.Operations.query}}"/>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</blockly>

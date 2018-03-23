@@ -1,0 +1,174 @@
+<md-card style="box-shadow: inherit" ng-init="vars.users = {}; vars.users.isEditing = true ;vars.loggedUser = blockly.js.blockly.user.UserController.getLoggedUser(); blockly.js.blockly.user.UserController.getActiveSkillLevels()"> 
+  <div class="image-cropper"> 
+    <img ng-src="{{$root.vars.loggedUser.user.picture || 'resources/img/no-image.png'}}" class="md-card-image rounded-img-card" alt="{{vars.loggedUser.user.name}}"> 
+  </div> 
+  <md-card-title> 
+    <md-card-title-text> 
+      <span class="md-headline gradient-cronapp">{{vars.loggedUser.user.name}}</span> 
+      <span style="text-align: center;" class="md-subhead">{{vars.loggedUser.user.email}}</span> 
+    </md-card-title-text> 
+  </md-card-title> 
+  <md-card-content> 
+    <form class="form-validation" autocomplete="new-password" name="userform" ng-cloak> 
+      <div layout-padding> 
+        <div layout="row" layout-sm="column" layout-xs="column"> 
+        </div> 
+        <div layout="row" layout-sm="column" layout-xs="column"> 
+          <md-input-container class="md-block my-input-container" flex=""> 
+            <label>{{'Name' | translate}}</label> 
+            <input ng-disabled="!vars.users.isEditing" ng-model="vars.loggedUser.user.name" id="textinput-name" required md-no-asterisk="" name="userNameField" md-maxlength="200" autocomplete="off"> 
+            <div ng-messages="userform.userNameField.$error"> 
+              <div ng-message="required">
+                 This field is required. 
+              </div> 
+              <div ng-message="md-maxlength">
+                 The field must be less than 200 characters long. 
+              </div> 
+            </div> 
+          </md-input-container> 
+          <md-input-container class="md-block  my-input-container" flex=""> 
+            <label>{{'Email' | translate}}</label> 
+            <input ng-disabled="!vars.users.isEditing" ng-model="vars.loggedUser.user.email" type="email" id="textinput-email" required md-no-asterisk="" name="userEmailField" md-maxlength="200" ng-pattern="/^.+@.+\..+$/" autocomplete="off"> 
+            <div ng-messages="userform.userEmailField.$error"> 
+              <div ng-message="required">
+                 This field is required. 
+              </div> 
+              <div ng-message="md-maxlength">
+                 The field must be less than 200 characters long. 
+              </div> 
+              <div ng-message="pattern">
+                 Wrong field pattern. 
+              </div> 
+            </div> 
+          </md-input-container> 
+        </div> 
+        <div layout="row" layout-sm="column" layout-xs="column"> 
+          <md-input-container class="md-block  my-input-container" flex=""> 
+            <label>{{'Login' | translate}}</label> 
+            <input ng-disabled="!vars.users.isEditing" ng-model="vars.loggedUser.user.login" id="textinput-login" required md-no-asterisk="" name="userLoginField" md-maxlength="200" ng-pattern="/^.+@.+\..+$/" type="email" autocomplete="off"> 
+            <div ng-messages="userform.userLoginField.$error"> 
+              <div ng-message="required">
+                 This field is required. 
+              </div> 
+              <div ng-message="md-maxlength">
+                 The field must be less than 200 characters long. 
+              </div> 
+              <div ng-message="pattern">
+                 Wrong field pattern. 
+              </div> 
+            </div> 
+          </md-input-container> 
+          <md-input-container class="md-block  my-input-container" flex=""> 
+            <label>{{'Password' | translate}}</label> 
+            <input ng-disabled="!vars.users.isEditing" ng-model="vars.loggedUser.user.password" id="textinput-password" required md-no-asterisk="" name="userPasswordField" md-minlength="8" type="password" ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).+$/" autocomplete="new-password"> 
+            <div ng-messages="userform.userPasswordField.$error"> 
+              <div ng-message="required">
+                 This field is required. 
+              </div> 
+              <div ng-message="md-maxlength">
+                 The field must be less than 200 characters long. 
+              </div> 
+              <div ng-message="md-minlength">
+                 The field must not be less than 8 characters long. 
+              </div> 
+              <div ng-message="pattern">
+                 Wrong field pattern. It is mandatory at least one upper case, one lower case and one digit 
+              </div> 
+            </div> 
+          </md-input-container> 
+        </div> 
+        <div layout="row" layout-sm="column" layout-xs="column"> 
+          <md-input-container class="md-block  my-input-container" flex=""> 
+            <label>Weekly Availability (Hrs)</label> 
+            <input ng-disabled="!vars.users.isEditing" ng-model="vars.loggedUser.user.weekly_availability" id="textinput-weekly_availability" required md-no-asterisk="" name="userWeekly_availabilityField" type="number" autocomplete="off"> 
+            <div ng-messages="userform.userWeekly_availabilityField.$error"> 
+              <div ng-message="required">
+                 This field is required. 
+              </div> 
+              <div ng-message="md-maxlength">
+                 The field must be less than 200 characters long. 
+              </div> 
+              <div ng-message="md-minlength">
+                 The field must not be less than 8 characters long. 
+              </div> 
+              <div ng-message="pattern">
+                 Wrong field pattern. At least one upper case At least one lower case At least one digit 
+              </div> 
+            </div> 
+          </md-input-container> 
+        </div> 
+        <!--VIEW --> 
+        <div class="" ng-if="vars.loggedUser.user.resume &amp;&amp; !vars.users.isEditing"> 
+          <h4>{{'Resume' | translate}}</h4> 
+          <button class="btn btn-sm" ng-click="cronapi.internal.downloadFileEntity(vars.loggedUser.user, 'resume')"> <span class="glyphicon glyphicon-download-alt"></span> </button> 
+        </div> 
+        <div class="" ng-if="vars.loggedUser.user.picture &amp;&amp; !vars.users.isEditing"> 
+          <h4>Picture</h4> 
+          <div class=""> 
+            <a href="{{vars.loggedUser.user.picture}}" target="_blank"> <img data-ng-src="{{vars.loggedUser.user.picture.startsWith('http') || (vars.loggedUser.user.picture.startsWith('/') &amp;&amp; vars.loggedUser.user.picture.length < 1000)? vars.loggedUser.user.picture : 'data:image/png;base64,' + vars.loggedUser.user.picture}}" style="max-height: 30px;"> </a> 
+          </div> 
+        </div> 
+        <!-- END VIEW --> 
+        <div layout="column"> 
+          <div data-component="crn-dynamic-file" id="crn-textinput-resume" class="myDivContainer" ng-if="vars.users.isEditing"> 
+            <div class="form-group"> 
+              <label for="textinput-resume" class="">{{'Resume' | translate}}</label> 
+              <!-- else for if !model.hasCronappFramework() --> 
+              <div dynamic-file="" ng-model="vars.loggedUser.user.resume" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                 {{"template.crud.clickOrDragAnFile" | translate}} 
+              </div> 
+              <!-- end if !model.hasCronappFramework() --> 
+            </div> 
+          </div> 
+          <div data-component="crn-dynamic-image" id="crn-textinput-picture" class="myDivContainer" style="width: min-content;" ng-if="vars.users.isEditing"> 
+            <div class="form-group"> 
+              <label for="textinput-picture" class="">Picture</label> 
+              <div dynamic-image="" ng-model="vars.loggedUser.user.picture" max-file-size="200KB" class="dynamic-image-container" ng-required="false">
+                 {{"template.crud.clickOrDragAnImage" | translate}} 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+        <!--CHIPS--> 
+        <md-chips style="padding: 0;" ng-model="vars.loggedUser.skills" name="skillNames" readonly="false" md-removable="true" md-transform-chip="blockly.js.blockly.skill.SkillController.addSkillChip($chip, vars.loggedUser.skills)" md-autocomplete-snap="" md-require-match="true"> 
+          <md-autocomplete md-selected-item="selectedItem" md-no-cache="true" md-search-text="vars.loggedUser.searchSkillText" md-items="skillItem in blockly.js.blockly.skill.SkillController.getSkills(vars.loggedUser.searchSkillText)" md-item-text="skillItem.skill.skill" placeholder="Digite uma competência..."> 
+            <img ng-src="{{skillItem.skill.icon}}" ng-if="skillItem.skill.icon"> 
+            <span md-highlight-text="vars.loggedUser.searchText">{{skillItem.skill.skill}}</span> 
+            <md-not-found>
+               Não encontrado 
+            </md-not-found> 
+          </md-autocomplete> 
+          <md-chip-template> 
+            <md-menu> 
+              <i class="material-icons" ng-click="$mdMenu.open()" style="vertical-align: middle;">more_vert</i> 
+              <md-menu-content width="3" ng-mouseleave="$mdMenu.close()"> 
+                <md-menu-item ng-repeat="itemLevel in vars.users.skillLevels"> 
+                  <md-button ng-click="$chip.skillLevel = itemLevel">
+                     {{itemLevel.level}} 
+                  </md-button> 
+                </md-menu-item> 
+              </md-menu-content> 
+              <md-tooltip>
+                 Select Skill Level 
+              </md-tooltip> 
+            </md-menu> 
+            <img ng-src="{{$chip.skill.icon}}"> 
+            <strong>{{$chip.skill.skill}}</strong> 
+            <em ng-if="$chip.skillLevel != null">({{$chip.skillLevel.level}})</em> 
+          </md-chip-template> 
+        </md-chips> 
+      </div> 
+      <md-dialog-actions layout="row"> 
+        <span flex></span> 
+        <md-button ng-click="blockly.js.blockly.user.UserController.saveUser(vars.loggedUser.user, vars.loggedUser.skills, 'modalUser');  vars.loggedUser = blockly.js.blockly.user.UserController.getLoggedUser(); $root.vars.loggedUser = blockly.js.blockly.user.UserController.getLoggedUser();" ng-disabled="userform.$invalid || vm.dataLoading" ng-if="vars.users.isEditing">
+           Save 
+        </md-button> 
+        <md-button ng-if="false" ng-click="$mdDialog.cancel()">
+           Cancel 
+        </md-button> 
+      </md-dialog-actions> 
+    </form> 
+  </md-card-content> 
+  <md-card-actions layout="row" layout-align="end center"> 
+  </md-card-actions> 
+</md-card>

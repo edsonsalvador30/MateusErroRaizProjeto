@@ -1,0 +1,169 @@
+<h3>UserSkills</h3>
+
+<!-- div row para pesquisa -->
+<!--<div class="row">-->
+
+    <div ng-hide="UserSkills.inserting || UserSkills.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="">
+        <div class="form-group">
+            <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
+            <input ng-model="vars.search" cronapp-filter="user.email;user.name;skill.skill" cronapp-filter-operator="" cronapp-filter-caseinsensitive="false" cronapp-filter-autopost="true" crn-datasource="UserSkills" class="form-control" value="" placeholder="{search}" ___placeholder="{search}" _______________placeholder="{{'template.crud.search' | translate}}" _________placeholder="{search}" type="text">
+        </div>
+    </div>
+
+<div data-component="crn-button" id="crn-button-564202" class="">
+    <button class="btn btn-primary" type="submit" onclick="" data-component="crn-button" ng-click="UserSkills.startInserting()" ng-hide="UserSkills.inserting || UserSkills.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button>
+</div>
+<!-- fim div row para pesquisa -->
+<!--</div>-->
+
+<datasource filter="" name="UserSkills" entity="api/cronapi/crud/app.entity.UserSkills" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
+<div class="component-holder" data-component="crn-grid" id="crn-grid-UserSkills">
+    <div crn-datasource="UserSkills" class="" ng-hide="UserSkills.editing || UserSkills.inserting">
+        <table class="table  table-bordered table-hover table-striped">
+            <thead>
+            <tr class="table-header">
+                <th class="">
+                    <div class="">User</div>
+                </th>
+                <th class="">
+                    <div class="">Skill</div>
+                </th>
+                <th class="">
+                    <div class="">Level</div>
+                </th>
+                <th class="">
+                    <div class="">Attachment</div>
+                </th>
+                <th class="">
+                    <div class="">{{"template.crud.actions" | translate}}</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-content" ng-repeat="rowData in datasource.data">
+                <td class="">
+                    <div class="">
+                            {{rowData.user.email}}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                            {{rowData.skill.skill}}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.level  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                    <button ng-if="rowData.attachment" class="btn btn-sm" ng-click="cronapi.internal.downloadFileEntity(datasource, 'attachment', $index)">
+                                        <span class="glyphicon glyphicon-download-alt"></span>
+                                    </button>
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-footer-controls">
+            <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
+        </div>
+    </div>
+</div>
+<div data-component="crn-form" id="crn-form-form-UserSkills">
+    <div class="form" ng-show="UserSkills.editing || UserSkills.inserting">
+        <form crn-datasource="UserSkills" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button>
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
+                <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+            <br>
+            <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+                    <datasource name="user" entity="api/cronapi/query/vf6eck9p7pdj/" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource" class="component-holder" id="crn-datasource-89158"></datasource>
+
+                <div data-component="crn-combobox-dynamic" id="crn-combobox-dynamic-user" class="">
+                    <div class="form-group">
+                        <label for="combobox-dynamic-user" class="">User</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <ui-select ng-model="UserSkills.active.user" crn-datasource="user" class="crn-select" id="combobox-dynamic-user" ng-required="false" theme="bootstrap">
+                                    <ui-select-match class="" placeholder="Select...">
+                                        {{$select.selected.email}}
+                                    </ui-select-match>
+                                    <ui-select-choices repeat="rowData in datasource.data | filter : $select.search" class="" refresh="" refresh-deplay="">
+                                        <div class="" data-container="true">
+                                            {{rowData.email}}
+                                        </div>
+                                    </ui-select-choices>
+                                </ui-select>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+                    
+
+                <datasource name="Skill" entity="api/cronapi/query/rkzkigkpjw4m/" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource" class="component-holder" id="crn-datasource-485006"></datasource><div data-component="crn-combobox-dynamic" id="crn-combobox-dynamic-skill" class="">
+                    <div class="form-group">
+                        <label for="combobox-dynamic-skill" class="">Skill</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <ui-select ng-model="UserSkills.active.skill" crn-datasource="Skill" class="crn-select" id="combobox-dynamic-skill" ng-required="true" theme="bootstrap">
+                                    <ui-select-match class="" placeholder="Select...">
+                                        {{$select.selected.skill}}
+                                    </ui-select-match>
+                                    <ui-select-choices repeat="rowData in datasource.data | filter : $select.search" class="" refresh="" refresh-deplay="">
+                                        <div class="" data-container="true">
+                                            {{rowData.skill}}
+                                        </div>
+                                    </ui-select-choices>
+                                </ui-select>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-level" class="">
+                    <div class="form-group">
+                        <label for="textinput-level" class="">Level</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input ng-model="UserSkills.active.level" class="form-control" id="textinput-level" placeholder="Level" mask="" mask-placeholder="" ng-required="false" type="integer">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-dynamic-file" id="crn-textinput-attachment" class="">
+                    <div class="form-group">
+                        <label for="textinput-attachment" class="">Attachment</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <div dynamic-file="" ng-model="UserSkills.active.attachment" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                                  {{"template.crud.clickOrDragAnFile" | translate}}
+                                </div>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+                <!-- NtoN  -->
+                <!-- NtoN  end-->
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <!-- OneToN -->
+                <!-- OneToOne  end -->
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<!-- OneToOne modal -->
+<!-- OneToOne modal end-->

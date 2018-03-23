@@ -1,0 +1,303 @@
+<h3 class="col-xs-12" ng-init="cronapi.util.makeCallServerBlocklyAsync('blockly.CreateObject:createOptionsChips', null, null)">{{'UserAndSkills' | translate}}</h3> 
+<div ng-hide="User.inserting || User.editing" class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-datasource-filter" id="crn-datasource-filter-1001003"> 
+  <div class="form-group"> 
+    <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label> 
+    <input type="text" mask="" mask-placeholder="" cronapp-filter="name;email" cronapp-filter-operator="" cronapp-filter-caseinsensitive="true" cronapp-filter-autopost="true" crn-datasource="User" ng-model="vars.filter226" class="form-control" value="" placeholder="Filtro em manutenção....se filtrar vai dar erro...o cronapp monta a query com ORDER BY e depois coloca o filtro WHERE...mas um dia vai funcionar assim"> 
+  </div> 
+</div> 
+<!-- div row para pesquisa --> 
+<!--<div class="row">--> 
+<div class="component-holder ng-binding ng-scope  col-xs-0" data-component="crn-datasource-filter" id="crn-datasource-filter-731968"> 
+  <div class="form-group"> 
+  </div> 
+</div> 
+<div data-component="crn-button" id="crn-button-564202" class="col-xs-12"> 
+  <button class="btn btn-primary" onclick="" data-component="crn-button" ng-click="User.startInserting()" ng-hide="User.inserting || User.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button> 
+</div> 
+<!-- fim div row para pesquisa --> 
+<!--</div>--> 
+<datasource filter="" name="User" entity="api/cronapi/query/ubu8ll5si9nl/" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource> 
+<div class="component-holder col-xs-12" data-component="crn-grid" id="crn-grid-User"> 
+  <div crn-datasource="User" class="" ng-hide="User.editing || User.inserting"> 
+    <table class="table  table-bordered table-hover table-striped"> 
+      <thead> 
+        <tr class="table-header"> 
+          <th class=""> 
+            <div class="">
+               {{'Name' | translate}} 
+            </div> </th> 
+          <th class="hidden-xs"> 
+            <div class="">
+               {{'Email' | translate}} 
+            </div> </th> 
+          <th class=""> 
+            <div class="">
+               {{'Resume' | translate}} 
+            </div> </th> 
+          <th class=""> 
+            <div class="">
+               {{'EditSkills' | translate}} 
+            </div> </th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr class="table-content" ng-repeat="rowData in datasource.data"> 
+          <td class=""> 
+            <div class="">
+               {{rowData.name }} 
+            </div> </td> 
+          <td class="hidden-xs"> 
+            <div class="">
+               {{rowData.email }} 
+            </div> </td> 
+          <td class=""> 
+            <div class=""> 
+              <button ng-if="rowData.resume" class="btn btn-sm" ng-click="cronapi.internal.downloadFileEntity(datasource, 'resume', $index)"> <span class="glyphicon glyphicon-download-alt"></span> </button> 
+            </div> </td> 
+          <td class=""> 
+            <div class=""> 
+              <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button> 
+              <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button> 
+            </div> </td> 
+        </tr> 
+      </tbody> 
+    </table> 
+    <div class="table-footer-controls"> 
+      <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button> 
+    </div> 
+  </div> 
+</div> 
+<div class="component-holder ng-binding ng-scope col-xs-12" data-component="crn-image" id="crn-image-471962"></div> 
+<div data-component="crn-form" id="crn-form-form-User" class="col-xs-12"> 
+  <div class="form" ng-show="User.editing || User.inserting"> 
+    <form crn-datasource="User" class=""> 
+      <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting"> 
+        <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button> 
+        <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button> 
+        <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button> 
+        <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button> 
+        <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button> 
+      </div> 
+      <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting"> 
+        <button class="btn btn-success" data-component="crn-button" ng-click="blockly.js.blockly.UserSkill.saveUserSkill()"><i class="glyphicon glyphicon-ok"></i></button> 
+        <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button> 
+      </div> 
+      <br> 
+      <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting"> 
+        <div layout="row" layout-sm="column"> 
+          <div data-component="crn-textinput" id="crn-textinput-name" class="" flex=""> 
+            <div class="form-group"> 
+              <md-input-container class="md-block" flex=""> 
+                <label class="">{{'Name' | translate}}</label> 
+                <!-- else for if !model.hasCronappFramework() --> 
+                <input ng-model="User.active.name" class="form-control" id="textinput-name" placeholder="" mask="" mask-placeholder="" ng-required="true" type="text"> 
+              </md-input-container> 
+              <!-- end if !model.hasCronappFramework() --> 
+            </div> 
+          </div> 
+          <div data-component="crn-textinput" id="crn-textinput-email" class="" flex=""> 
+            <div class="form-group"> 
+              <md-input-container class="md-block" flex=""> 
+                <label for="textinput-email" class="">{{'Email' | translate}}</label> 
+                <!-- else for if !model.hasCronappFramework() --> 
+                <input ng-model="User.active.email" class="form-control" id="textinput-email" placeholder="" mask="" mask-placeholder="" ng-required="false" type="text"> 
+              </md-input-container> 
+              <!-- end if !model.hasCronappFramework() --> 
+            </div> 
+          </div> 
+        </div> 
+        <div layout="row" layout-sm="column"> 
+          <div data-component="crn-textinput" id="crn-textinput-login" class="" flex=""> 
+            <div class="form-group"> 
+              <md-input-container class="md-block" flex=""> 
+                <label for="textinput-login" class="">{{'Login' | translate}}</label> 
+                <!-- else for if !model.hasCronappFramework() --> 
+                <input ng-model="User.active.login" class="form-control" id="textinput-login" placeholder="" mask="" mask-placeholder="" ng-required="true" type="text"> 
+                <!-- end if !model.hasCronappFramework() --> 
+              </md-input-container> 
+            </div> 
+          </div> 
+          <div data-component="crn-textinput" id="crn-textinput-password" class="" flex=""> 
+            <div class="form-group"> 
+              <md-input-container class="md-block" flex=""> 
+                <label for="textinput-password" class="">{{'Password' | translate}}</label> 
+                <!-- else for if !model.hasCronappFramework() --> 
+                <input ng-model="User.active.password" class="form-control" id="textinput-password" placeholder="" mask="" mask-placeholder="" ng-required="true" type="password"> 
+                <!-- end if !model.hasCronappFramework() --> 
+              </md-input-container> 
+            </div> 
+          </div> 
+        </div> 
+        <div data-component="crn-dynamic-file" id="crn-textinput-resume" class=""> 
+          <div class="form-group"> 
+            <label for="textinput-resume" class="">{{'Resume' | translate}}</label> 
+            <!-- else for if !model.hasCronappFramework() --> 
+            <div dynamic-file="" ng-model="User.active.resume" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+               {{"template.crud.clickOrDragAnFile" | translate}} 
+            </div> 
+            <!-- end if !model.hasCronappFramework() --> 
+          </div> 
+        </div> 
+        <!-- NtoN  --> 
+        <!-- NtoN  end--> 
+      </fieldset> 
+    </form> 
+    <form> 
+      <fieldset> 
+        <!-- OneToN --> 
+        <!--query filter 1toN --> 
+        <!-- query filter 1toN end--> 
+        <datasource filter="" name="UserSkillsGrid" enabled="{{User.editing || User.inserting}}" entity="api/cronapi/crud/app.entity.User/{{User.active.id}}/relation:user:UserSkills" keys="id" rows-per-page="100" lazy="true" auto-post="true" dependent-lazy-post="User" dependent-lazy-post-field="user"></datasource> 
+        <div data-component="crn-button" class=""> 
+          <button class="btn btn-primary" onclick="$('#modalUserSkillsGrid').modal('show');" data-component="crn-button" ng-click="UserSkillsGrid.startInserting();"><i class="fa fa-plus"></i> <span class="">{{'AddTranslateUserskills' | translate}}</span> </button> 
+        </div> 
+        <button class="btn btn-default component-holder" ng-click="blockly.js.blockly.SkillsChips.Execute(Front)" xattr-size="" xattr-fullsize="" xattr-theme="btn-default" data-component="crn-button" id="crn-button-187524"><i class="glyphicon glyphicon-home"></i> <span>Button </span></button> 
+        <!--search 1toN--> 
+        <!-- seach 1toN end--> 
+        <div data-component="crn-textinput" id="crn-textinput-descricao"> 
+          <div class="form-group"> 
+            <label for="textinput-descricao" class="">{{'UserSkills2' | translate}}</label> 
+            <div class="component-holder" data-component="crn-grid" id="crn-grid-UserSkillsGrid"> 
+              <div crn-datasource="UserSkillsGrid"> 
+                <table class="table table-bordered table-hover table-striped"> 
+                  <thead> 
+                    <tr class="table-header"> 
+                      <th class=""> 
+                        <div class="">
+                           {{'Skill' | translate}} 
+                        </div> </th> 
+                      <th class="hidden-xs"> 
+                        <div class="">
+                           {{'Level' | translate}} 
+                        </div> </th> 
+                      <th class="hidden-xs"> 
+                        <div class="">
+                           {{'Attachment' | translate}} 
+                        </div> </th> 
+                      <th class=""> 
+                        <div class="">
+                           {{"template.crud.actions" | translate}} 
+                        </div> </th> 
+                    </tr> 
+                  </thead> 
+                  <tbody> 
+                    <tr class="table-content" ng-repeat="rowData in datasource.data"> 
+                      <td class=""> 
+                        <div>
+                           {{rowData.skill.skill }} 
+                        </div> </td> 
+                      <td class="hidden-xs"> 
+                        <div>
+                           {{rowData.level }} 
+                        </div> </td> 
+                      <td class="hidden-xs"> 
+                        <div> 
+                          <button ng-if="rowData.attachment" data-component="crn-button" class="btn btn-sm" ng-click="cronapi.internal.downloadFileEntity(datasource, 'attachment', $index)"> <span class="glyphicon glyphicon-download-alt"></span> </button> 
+                        </div> </td> 
+                      <td> 
+                        <div> 
+                          <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.startEditing(rowData)" onclick="$('#modalUserSkillsGrid').modal('show');"><i class="fa fa-edit"></i></button> 
+                          <button class="btn btn-default btn-sm" data-component="crn-button" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button> 
+                        </div> </td> 
+                    </tr> 
+                  </tbody> 
+                </table> 
+                <div class="table-footer-controls"> 
+                  <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <div ui-view="" class="container-fluid main-view" data-container="true"> 
+            <md-chips ng-model="UserSkillsGrid.data" name="skillNames" readonly="skill.readonly" md-removable="skill.removable" md-transform-chip="blockly.js.blockly.SkillsChips.addChip($chip)" md-autocomplete-snap="" md-require-match="true"> 
+              <md-autocomplete md-selected-item="skill.selectedItem" md-search-text="searchText" md-search-text-change="items = blockly.js.blockly.SkillsChips.getSkill(searchText)" md-items="item in items" md-item-text="item.skill.skill" placeholder="Digite uma competência..."> 
+                <img ng-src="{{item.skill.icon}}"> <span md-highlight-text="searchText">{{item.skill.skill}}</span> 
+                <md-not-found>
+                   Não encontrada 
+                </md-not-found> 
+              </md-autocomplete> 
+              <md-chip-template> 
+                <md-menu> 
+                  <i class="material-icons" ng-click="$mdMenu.open()" style="vertical-align: middle;">more_vert</i> 
+                  <md-menu-content width="3" ng-mouseleave="$mdMenu.close()"> 
+                    <md-menu-item ng-repeat="itemLevel in SkillLevel.data"> 
+                      <md-button ng-click="$chip.skillLevel = itemLevel">
+                         {{itemLevel.level}} 
+                      </md-button> 
+                    </md-menu-item> 
+                  </md-menu-content> 
+                </md-menu> 
+                <img ng-src="{{$chip.skill.icon}}">
+                <strong>{{$chip.skill.skill}}</strong> 
+                <em>({{$chip.skillLevel.level}})</em> 
+              </md-chip-template> 
+            </md-chips> 
+          </div> 
+        </div> 
+        <!-- OneToOne  end --> 
+      </fieldset> 
+    </form> 
+  </div> 
+</div> 
+<!-- OneToOne modal --> 
+<div class="modal fade col-xs-12" id="modalUserSkillsGrid"> 
+  <div class="modal-dialog"> 
+    <div class="modal-content"> 
+      <form> 
+        <div class="modal-header"> 
+          <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span aria-hidden="true">×</span></button> 
+          <h4 class="modal-title">UserSkills</h4> 
+        </div> 
+        <div class="modal-body"> 
+          <div class="list-group list-group-sm row"> 
+            <!-- else of !model.hasCronappFramework() --> 
+            <!-- end if !model.hasCronappFramework() --> 
+            <!-- else of !model.hasCronappFramework() --> 
+            <!-- end if !model.hasCronappFramework() --> 
+            <!-- else of !model.hasCronappFramework() --> 
+            <datasource name="SkillGridForUiSelect" entity="api/cronapi/query/rkzkigkpjw4m/" keys="id" rows-per-page="100" lazy="true" enabled="{{User.editing || User.inserting}}"></datasource> 
+            <div data-component="crn-combobox-dynamic" id="crn-combobox-UserSkillsGrid.active.skill" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+              <div class="form-group"> 
+                <label for="combobox-skill" class="">Skill</label> 
+                <ui-select ng-model="UserSkillsGrid.active.skill" crn-datasource="SkillGridForUiSelect" class="crn-select" id="combobox-skill" ng-required="true" ng-disabled="disabled" theme="bootstrap"> 
+                  <ui-select-match placeholder="Select..." class="">
+                     {{$select.selected.skill}} 
+                  </ui-select-match> 
+                  <ui-select-choices repeat="rowData in datasource.data | filter : $select.search" class="" refresh="" refresh-deplay=""> 
+                    <div class="">
+                       {{rowData.skill}} 
+                    </div> 
+                  </ui-select-choices> 
+                </ui-select> 
+              </div> 
+            </div> 
+            <div data-component="crn-textinput" id="crn-textinput-level" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+              <div class="form-group"> 
+                <label for="textinput-level">Level</label> 
+                <input ng-model="UserSkillsGrid.active.level" class="form-control" id="textinput-level" placeholder="Level" mask="" mask-placeholder="" ng-required="false" type="integer"> 
+              </div> 
+            </div> 
+            <!-- end if !model.hasCronappFramework() --> 
+            <!-- else of !model.hasCronappFramework() --> 
+            <div data-component="crn-dynamic-file" id="crn-textinput-attachment" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+              <div class="form-group"> 
+                <label for="textinput-attachment">Attachment</label> 
+                <div dynamic-file="" ng-model="UserSkillsGrid.active.attachment" max-file-size="5MB" class="dynamic-image-container" ng-required="false">
+                   {{"template.crud.clickOrDragAnFile" | translate}} 
+                </div> 
+              </div> 
+            </div> 
+            <!-- end if !model.hasCronappFramework() --> 
+            <!-- else of !model.hasCronappFramework() --> 
+            <!-- end if !model.hasCronappFramework() --> 
+          </div> 
+        </div> 
+        <div class="modal-footer"> 
+          <button class="btn btn-primary" data-component="crn-button" ng-click="UserSkillsGrid.post();" onclick="(!UserSkillsGrid.missingRequiredField()?$('#modalUserSkillsGrid').modal('hide'):void(0))">{{'Save' | translate}}</button> 
+          <button type="button" class="btn btn-default" data-component="crn-button" data-dismiss="modal">{{'Home.view.Close' | translate}}</button> 
+        </div> 
+      </form> 
+    </div> 
+  </div> 
+</div> 
+<!-- OneToOne modal end--><datasource name="SkillLevel" entity="api/cronapi/query/getskilllevels/" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource" class="component-holder" id="datasource-skilllevels" filter=""></datasource>

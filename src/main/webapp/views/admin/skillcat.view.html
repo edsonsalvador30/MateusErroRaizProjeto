@@ -1,0 +1,144 @@
+<h3 class="gradient-cronapp" style="text-align: left">{{'SkillCat' | translate}}</h3> 
+<!-- div row para pesquisa --> 
+<!--<div class="row">--> 
+<!--div ng-hide="SkillCat.inserting || SkillCat.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class=""> 
+  <div class="form-group"> 
+    <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label> 
+    <input type="text" ng-model="vars.search" cronapp-filter="category;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="SkillCat" class="form-control" value="" placeholder="{{'template.crud.search' | translate}}"> 
+  </div> 
+</div--> 
+<div layout="row" layout-wrap=""> 
+  <md-input-container class="md-block" flex="" style="margin-bottom: -15px;" ng-hide="SkillCat.inserting || SkillCat.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" value="" placeholder="{{'template.crud.search' | translate}}"> 
+    <!-- Use floating label instead of placeholder --> 
+    <label>{{"template.crud.search" | translate}}</label> 
+    <input type="text" ng-model="vars.search" cronapp-filter="category;" cronapp-filter-operator="" cronapp-filter-autopost="true" crn-datasource="SkillCat"> 
+  </md-input-container> 
+  <!--md-button class="md-icon-button" ng-click="blockly.js.blockly.user.UserController.getUsers()"> 
+      <md-tooltip>
+         Search 
+      </md-tooltip> 
+      <md-icon> 
+        <span class="glyphicon glyphicon-search"></span> 
+      </md-icon> 
+    </md-button--> 
+</div> 
+<md-button class="md-raised md-primary" type="submit" ng-click="SkillCat.startInserting()" ng-hide="SkillCat.inserting || SkillCat.editing">
+   {{"template.crud.new" | translate}} 
+</md-button> 
+<div data-component="crn-button" id="crn-button-564202" class=""> 
+  <!--button class="btn btn-primary" type="submit" onclick="" data-component="crn-button" ng-click="SkillCat.startInserting()" ng-hide="SkillCat.inserting || SkillCat.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button--> 
+</div> 
+<!-- fim div row para pesquisa --> 
+<!--</div>--> 
+<datasource filter="" name="SkillCat" entity="api/cronapi/crud/app.entity.SkillCat" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource> 
+<div class="component-holder" data-component="crn-grid" id="crn-grid-SkillCat"> 
+  <div crn-datasource="SkillCat" class="" ng-hide="SkillCat.editing || SkillCat.inserting"> 
+    <table class="table  table-bordered table-hover table-striped"> 
+      <thead> 
+        <tr class="table-header"> 
+          <th class=""> 
+            <div class="">
+               {{'Category' | translate}} 
+            </div> </th> 
+          <th class=""> 
+            <div class="">
+               {{"template.crud.actions" | translate}} 
+            </div> </th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr class="table-content" ng-repeat="rowData in datasource.data"> 
+          <td class=""> 
+            <div class="">
+               {{rowData.category }} 
+            </div> </td> 
+          <td class=""> 
+            <div class=""> 
+              <md-button type="submit" class="md-fab md-mini md-primary" aria-label="Edit" ng-click="datasource.startEditing(rowData)"> 
+                <md-tooltip>
+                   Edit 
+                </md-tooltip> 
+                <md-icon> 
+                  <i class="material-icons">mode_edit</i> 
+                </md-icon> 
+              </md-button> 
+              <md-button type="submit" class="md-fab md-mini md-primary" aria-label="Remove" ng-click="datasource.remove(rowData)"> 
+                <md-tooltip>
+                   Remove 
+                </md-tooltip> 
+                <md-icon> 
+                  <i class="material-icons">close</i> 
+                </md-icon> 
+              </md-button> 
+              <!--button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button> 
+              <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button--> 
+            </div> </td> 
+        </tr> 
+      </tbody> 
+    </table> 
+    <div class="table-footer-controls"> 
+      <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button> 
+    </div> 
+  </div> 
+</div> 
+<div data-component="crn-form" id="crn-form-form-SkillCat"> 
+  <div class="form" ng-show="SkillCat.editing || SkillCat.inserting"> 
+    <form crn-datasource="SkillCat" class=""> 
+      <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting"> 
+        <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button> 
+        <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button> 
+        <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button> 
+        <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button> 
+        <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button> 
+      </div> 
+      <!--div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting"> 
+        <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button> 
+        <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button> 
+      </div--> 
+      <br> 
+      <!--INSERT INPUT--> 
+      <div ng-hide="!datasource.editing &amp;&amp; !datasource.inserting"> 
+        <div layout="row" layout-wrap=""> 
+          <md-input-container class="md-block" flex="" style="margin-bottom: -15px;" ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting" data-component="crn-textinput" id="crn-textinput-category"> 
+            <!-- Use floating label instead of placeholder --> 
+            <label>{{'Category' | translate}}</label> 
+            <input type="text" ng-model="SkillCat.active.category" id="textinput-category" mask="" mask-placeholder="" ng-required="false"> 
+          </md-input-container> 
+          <md-button class="md-fab md-mini md-primary" ng-click="datasource.post()"> 
+            <md-tooltip>
+               Save 
+            </md-tooltip> 
+            <md-icon> 
+              <i class="material-icons">check_circle</i> 
+            </md-icon> 
+          </md-button> 
+          <md-button class="md-fab md-mini md-warn" ng-click="datasource.cancel()"> 
+            <md-tooltip>
+               Cancel 
+            </md-tooltip> 
+            <md-icon> 
+              <i class="material-icons">cancel</i> 
+            </md-icon> 
+          </md-button> 
+        </div> 
+      </div> 
+      <!--fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting"> 
+        <div data-component="crn-textinput" id="crn-textinput-category" class=""> 
+          <div class="form-group"> 
+            <label for="{{'Category' | translate}}" class="">{{'Category' | translate}}</label> 
+            <input type="text" ng-model="SkillCat.active.category" class="form-control" id="textinput-category" placeholder="Category" mask="" mask-placeholder="" ng-required="false"> 
+          </div> 
+        </div> 
+        
+      </fieldset--> 
+    </form> 
+    <form> 
+      <fieldset> 
+        <!-- OneToN --> 
+        <!-- OneToOne  end --> 
+      </fieldset> 
+    </form> 
+  </div> 
+</div> 
+<!-- OneToOne modal --> 
+<!-- OneToOne modal end-->
